@@ -22,34 +22,16 @@ let updateTimer;
 
 const music_list = [
     {
-        img : 'images/stay.png',
-        name : 'Stay',
-        artist : 'The Kid LAROI, Justin Bieber',
-        music : 'music/stay.mp3'
-    },
-    {
-        img : 'images/fallingdown.jpg',
-        name : 'Falling Down',
-        artist : 'Wid Cards',
-        music : 'music/fallingdown.mp3'
-    },
-    {
-        img : 'images/faded.png',
-        name : 'Faded',
-        artist : 'Alan Walker',
-        music : 'music/Faded.mp3'
-    },
-    {
-        img : 'images/ratherbe.jpg',
-        name : 'Rather Be',
-        artist : 'Clean Bandit',
-        music : 'music/Rather Be.mp3'
-    },
-    {
         img : 'images/tabas.png',
         name : 'Nicht mehr zurück',
         artist : 'DJ Tabas, Felix Pirs',
         music : 'music/nmz.wav'
+    },
+    {
+        img : 'images/gold-rush-kid.jpg',
+        name : 'Gold Rush Kid',
+        artist : 'George Ezra',
+        music : 'music/Gold-Rush-Kid_George-Ezra.mp3'
     }
 
 ];

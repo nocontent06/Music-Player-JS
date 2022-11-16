@@ -33,22 +33,125 @@ const music_list = [
     {
         index: 0,
         img: 'images/tabas.png',
-        name: 'Nicht mehr zurueck',
+        name: 'Nicht mehr zurück',
         artist: 'DJ Tabas, Felix Pirs',
-        music: 'music/nmz.wav'
+        music: 'music/nmz.wav',
+        lyrics: "Nimmermehr <br> \
+        Nimmermehr zu mir zurück zu mir Baby <br> \
+        Kann dich hier nimmer seh'n <br> \
+        "
     }, {
         index: 1,
         img: 'images/gold-rush-kid.jpg',
         name: 'Gold Rush Kid',
         artist: 'George Ezra',
-        music: 'music/Gold-Rush-Kid_George-Ezra.mp3'
+        music: 'https://github.com/nocontent06/nocontent06.github.io/blob/main/music/Gold-Rush' +
+                '-Kid_George-Ezra.mp3?raw=true',
+        lyrics: "Rock, paper, scissor, I play against the mirror <br> \
+        There hasn't been a winner for nine days straight <br> \
+        I went to see the doctor, she cut open my head <br> \
+        Took a look inside and this is what she said <br> \
+        Boy, you're not alone, although you feel alone <br> \
+        You're just like everyone <br> \
+        You're holding on  <br> \
+        Gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        I'm the gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now, I'm dancing <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now, I'm dancing <br> \
+        She said, You don't need money to build a swimming pool <br> \
+        I'm running all my taps, gonna flood the bathroom <br> \
+        All my friends are queuing up, they wanna dive in <br> \
+        They wanna figure out if they will sink or swim <br> \
+        You're not alone, although you feel alone <br> \
+        You're just like everyone <br> \
+        You're holding on <br> \
+        I'm the gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        I'm the gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now, I'm dancing <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now, I'm dancing <br> \
+        I, I want a vacant mind <br> \
+        Wanna dance 'til my shoes fall apart <br> \
+        And moon falls out of the sky <br> \
+        It's just a little dream of mine <br> \
+        I'm the gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        I'm the gold rush kid, robbing the bank <br> \
+        Making a run for it and learning to dance <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now I'm dancing <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now I'm dancing <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now I'm dancing <br> \
+        Watching me now, now, now <br> \
+        I see you watching me now I'm dancing <br> "
+    }, {
+        index: 2,
+        img: 'images/down-under.jpg',
+        name: 'Down Under',
+        artist: 'Flip Capella, [...], Leines',
+        music: 'https://github.com/nocontent06/nocontent06.github.io/blob/main/music/down-unde' +
+                'r-ft-leines.mp3?raw=true',
+        lyrics: "Travelin' in a fried-out Kombi <br> \
+        On a hippie trail, head full of zombie <br> \
+        I met a strange lady, she made me nervous <br> \
+        She took me in and gave me breakfast <br> \
+        And she said <br> \
+        Do you come from a land down under? <br> \
+        Where women glow and men plunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover <br> \
+        Do you come from a land down under? <br> \
+        Where women glow and men plunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover <br> \
+        Buyin' bread from a man in Brussels <br> \
+        He was six-foot-four and full of muscle <br> \
+        I said, 'Do you speak-a my language?' <br> \
+        He just smiled and gave me a Vegemite sandwich <br> \
+        He said <br> \
+        I come from a land down under <br> \
+        Where beer does flow and men chunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover, yeah <br> \
+        I come from a land down under <br> \
+        Where beer does flow and men chunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover, yeah <br> \
+        Lyin' in a den in Bombay <br> \
+        With a slack jaw, and not much to say <br> \
+        I said to the man, 'Are you tryin' to tempt me? <br> \
+        Because I come from the land of plenty' <br> \
+        Do you come from a land down under? <br> \
+        Where women glow and men plunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover <br> \
+        'Cause we are <br> \
+        Livin' in a land down under <br> \
+        Where women glow and men plunder <br> \
+        Can't you hear, can't you hear the thunder? <br> \
+        You better run, you better take cover, yeah <br> "
+    },
+    {
+        index: 3,
+        img: 'images/geronimo.jpg',
+        name: 'Geronimo',
+        artist: 'Sheppard',
+        music: 'https://github.com/nocontent06/nocontent06.github.io/blob/main/music/geronimo-sheppard.mp3?raw=true',
+        lyrics: "Can you feel it? <br>"
     }
-
 ];
 let songs_in_array = [];
 let artists_in_array = [];
 let images_in_array = [];
-
 
 let li;
 function log(log) {
@@ -57,6 +160,7 @@ function log(log) {
 loadTrack(track_index);
 
 function loadTrack(track_index) {
+    // lyrics.innerHTML = "Keine Lyrics vorhanden";
     clearInterval(updateTimer);
     reset();
 
@@ -69,16 +173,12 @@ function loadTrack(track_index) {
     now_playing.textContent = "Playing music " + (
         track_index + 1
     ) + " of " + music_list.length;
+    console.log(track_name.textContent);
+    lyrics.innerHTML = music_list[track_index].lyrics;
+    // if (music_list[0].name == "Gold Rush Kid") {     lyrics.innerHTML =
+    // fetch('lyrics/gold-rush-kid.txt')         .then(             response =>
+    // response.text()         )         .then(text => lyrics.innerHTML = text); }
 
-    if (track_index == 1) {
-        lyrics.innerHTML = fetch('lyrics/gold-rush-kid.txt')
-            .then(
-                response => response.text()
-            )
-            .then(text => lyrics.innerHTML = text);
-    } else {
-        lyrics.innerHTML = "Keine Lyrics vorhanden";
-    }
     updateTimer = setInterval(setUpdate, 1000);
 
     curr_track.addEventListener('ended', nextTrack);
@@ -94,17 +194,24 @@ function getCountOfSongs() {
         artists_in_array.push(music_list[index].artist);
         images_in_array.push(music_list[index].img);
 
-        log(songs_in_array);
-        log(artists_in_array);
-        log(images_in_array);
+        console.log(songs_in_array);
+        console.log(artists_in_array);
+        console.log(images_in_array);
 
-        li = document.querySelector('.song-list')
-            .innerHTML = artists_in_array.map((artist, index) => `<img class="cover-image-small" src="${images_in_array[index]}"> ${artist} - ${songs_in_array[index]}`)
-            .map((i  => `<li onclick = getloadTrack()>${i}</li>`))
+        li = document
+            .querySelector('.song-list')
+            .innerHTML = artists_in_array
+            .map(
+                    (artist, index) => `<img class="cover-image-small" src="${images_in_array[index]}"> ${artist} - <br> ${songs_in_array[index]}`
+                )
+            .map((i => `<li onclick = getloadTrack()>${i}</li>`))
             .join('');
         li.innerText = songs_in_array[index];
+       
+
         // songList.appendChild(li);
     }
+
     return count;
 
 }
@@ -114,15 +221,16 @@ function getloadTrack() {
     for (var i = 0, len = g.children.length; i < len; i++) {
 
         (function (index) {
-            g
-                .children[i]
-                .onclick = function () {
-                    loadTrack(index);
-                    playTrack();
+            g.children[i].onclick = 
+            function () {
+                track_index = index
+                loadTrack(index);
+                playTrack();
                 }
         })(i);
 
     }
+
 }
 console.log(li)
 function random_bg_color() {
@@ -202,6 +310,7 @@ function playTrack() {
         .classList
         .add('loader');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+
 }
 function pauseTrack() {
     curr_track.pause();
@@ -270,4 +379,38 @@ function setUpdate() {
         total_duration.textContent = durationMinutes + ":" +
                 durationSeconds;
     }
+}
+let j = 1;
+function backToSongList() {
+    j++;
+    console.log(j);
+    log('backToSongList');
+    if (j%2 == 0){
+        document.getElementById('song-list-wrapper').className = 'animated-song-out wrapper';
+        document.getElementById('song-list-wrapper').style.display = 'block'
+    }
+    else{
+        document.getElementById('song-list-wrapper').className = 'animated wrapper';
+        document.getElementById('song-list-wrapper').style.display = 'none'
+    }
+    }
+let i = 1;
+function hideLyrics() {
+    i++;
+    // document.getElementById('lyrics-wrapper').className = 'animated-right wrapper';
+    // document.getElementById('lyrics-wrapper').style.display = 'block'
+    console.log(i);
+    log('hideLyrics');
+    if (i%2 == 1){
+        document.getElementById('lyrics-wrapper').className = 'animated-lyrics-out wrapper';
+        document.getElementById('lyrics-wrapper').style.display = 'block'
+        console.log('even')
+    }
+    else{
+        document.getElementById('lyrics-wrapper').className = 'animated-right wrapper';
+        document.getElementById('lyrics-wrapper').style.display = 'block'
+        console.log('odd')
+        // document.getElementById('song-list-wrapper').style.display = 'none'
+    }
+
 }

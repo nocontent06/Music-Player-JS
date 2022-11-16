@@ -17,14 +17,13 @@
     </head>
     <body>
         <div class="player">
-            <div class="wrapper"  id="song-list-wrapper">
+            <div class="wrapper"  id="song-list-wrapper" >
                 <div class="song-list">
-
                 </div>
             </div>
             <div class="wrapper" id="track-wrapper">
-                <div class="back" onclick="backToSongList()">
-                    <i class="fa fa-arrow-left"></i>
+                <div class="back">
+                    <i class="fa fa-arrow-left" onclick="backToSongList()"></i><i class="fa fa-arrow-right" onclick="hideLyrics()"></i>
                 </div>
                 <div class="details">
                     <div class="now-playing">PLAYING x OF y</div>
@@ -85,12 +84,11 @@
                     <span class="stroke"></span>
                 </div>
             </div>
-            <div class="wrapper">
+            <div class="wrapper" id="lyrics-wrapper">
                 <div class="details">
                     <div class="lyrics"></div>
                 </div>
             </div>
         </div>
-
     </body>
 </html>

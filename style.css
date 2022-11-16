@@ -1,7 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
+    overflow: hidden;
 }
+
+
 .player{
     height: 95vh;
     display: flex;
@@ -185,20 +188,119 @@ i.fa-step-backward{
     overflow: auto;
 }
 
-#song-list-wrapper {
-    width: 300px;
-}
 
 li{
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
+li:hover{
+    color: #4286f4;
+    background-color: rgba(0, 0, 0, 0.22);
+    border-radius: 50px;
+}
+
 .cover-image-small {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     float: left;
     margin-right: 10px;
 }
+#track-wrapper {
+    position: relative;
+    z-index: 1;
+    left: 0%;
+}
+#song-list-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 650px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.22);
+    display: none;
+}
+
+.animated {
+    position: absolute;
+    left: -5000px;
+    -webkit-animation: slide 5s forwards;
+    animation: slide 5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@keyframes slide {
+    100% {
+        left: 0;
+    }
+}
+
+.animated-song-out{
+    position: absolute;
+    left: 0;
+    animation: slide 5s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes animated-song-out {
+    100% {
+        left: -5000px;
+    }
+}
+
+
+.fa-arrow-right{
+    margin-left: 90%;
+}
+#lyrics-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 650px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.22);
+    display: none;
+}
+.lyrics{
+-ms-overflow-style: none;
+overflow: -moz-scrollbars-none;
+scrollbar-width: none;
+padding-bottom: 10px;
+}
+
+
+
+
+.animated-right {
+    position: absolute;
+    right: -5000px;
+    -webkit-animation: slide-right 5s forwards;
+    animation: slide-right 0.5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes slide-right {
+    100% {
+        right: 0;
+    }
+}
+
+.animated-lyrics-out {
+    position: absolute;
+    right: 0;
+    -webkit-animation: slide-right-out 0.5s forwards;
+    animation: slide-right-out 0.5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+@keyframes slide-right-out {
+    100% {
+        right: -5000px;
+    }
+}
+    

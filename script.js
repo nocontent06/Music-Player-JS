@@ -33,7 +33,7 @@ const music_list = [
     {
         index: 0,
         img: 'images/tabas.png',
-        name: 'Nicht mehr zurück',
+        name: 'Nicht mehr zurueck',
         artist: 'DJ Tabas, Felix Pirs',
         music: 'music/nmz.wav'
     }, {
